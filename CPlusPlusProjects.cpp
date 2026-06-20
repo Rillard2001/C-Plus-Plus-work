@@ -5,6 +5,7 @@
 #include <memory>
 #include <vector>
 
+
 class Character {
 private:
     int health;
@@ -88,7 +89,9 @@ public:
 
 int main() {
 
-    std::unique_ptr<Player> Rillard = std::make_unique<Player>("Rillard", 60, 70);
+    srand(time(0));
+
+    std::unique_ptr<Player> Rillard = std::make_unique<Player>("Rillard", rand() % 101, rand() % 101);
 
     std::vector<std::unique_ptr<Character>> enemies;
 
