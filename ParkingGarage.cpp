@@ -33,9 +33,9 @@ public:
         std::string new_car_license_plate;
 
         std::cout << "Please provide the brand of the car: " << std::endl;
-        std::cin >> new_car_brand;
+        std::getline(std::cin, new_car_brand);
         std::cout << "Please provide the license plate of the car: " << std::endl;
-        std::cin >> new_car_license_plate;
+        std::getline(std::cin, new_car_license_plate);
 
 
         parked_cars.push_back(std::make_unique<Car>(new_car_brand, new_car_license_plate));
