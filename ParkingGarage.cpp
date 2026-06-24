@@ -104,23 +104,20 @@ int main() {
         std::cout << "4. Exit" << std::endl;
         std::cout << "Choose an option (number value): " << std::endl;
         std::cin >> user_input;
+        std::cin.ignore();
         std::cout << std::endl;
 
         switch (user_input) {
             case 1: 
                 car_garage.park_new_car();
-                std::cin.ignore();
-                std::cin.get();
                 break;
             case 2:
                 car_garage.list_parked_cars();
-                std::cin.ignore();
                 std::cin.get();
                 break;
             case 3:
                 car_garage.list_parked_cars();
                 car_garage.remove_parked_car();
-                std::cin.ignore();
                 std::cin.get();
                 break;
             case 4:
